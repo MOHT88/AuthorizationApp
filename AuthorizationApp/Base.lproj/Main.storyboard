@@ -124,7 +124,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logOutButton" destination="Nda-ku-G2m" id="hJ2-MD-fjO"/>
                         <outlet property="welcomeTextLabel" destination="zKT-4y-4lc" id="LSd-Xz-E0B"/>
                     </connections>
                 </viewController>
