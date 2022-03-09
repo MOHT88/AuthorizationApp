@@ -9,13 +9,32 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet var welcomeTextLabel: UILabel!
+    
+    @IBOutlet var logOutButton: UIButton!
+    
+    var welcomeText: String!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        welcomeTextLabel.text = "Welcome, " + welcomeText + "!\n 🤪"
 
         // Do any additional setup after loading the view.
     }
     
 
+    @IBAction func logOutButtonPressed() {
+        dismiss(animated: true)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

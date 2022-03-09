@@ -9,11 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var userNameText: UITextField!
-    @IBOutlet var passwordText: UITextField!
+    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var logInButton: UIButton!
-    
     
     
     private let okAction = UIAlertAction(title: "OK", style: .default)
@@ -25,7 +24,10 @@ class ViewController: UIViewController {
         
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.welcomeText = userNameTF.text
+    }
     
     @IBAction func remindUserName() {
         let remindUserName = UIAlertController(
@@ -49,5 +51,14 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func logInButtonPressed() {
+   }
+
+
+
+
+
+
 }
+
 

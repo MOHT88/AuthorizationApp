@@ -43,6 +43,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
+                                    <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjh-HL-pCZ"/>
                                     <segue destination="yCF-wU-PWh" kind="presentation" id="LNT-Bv-1vy"/>
                                 </connections>
                             </button>
@@ -84,25 +85,25 @@
                     </view>
                     <connections>
                         <outlet property="logInButton" destination="1xE-Kr-Gj7" id="bgx-H5-GH1"/>
-                        <outlet property="passwordText" destination="lpG-xS-wRj" id="3gI-xU-CO8"/>
-                        <outlet property="userNameText" destination="MHI-XU-zZ2" id="t7l-Xj-MYc"/>
+                        <outlet property="passwordTF" destination="lpG-xS-wRj" id="3gI-xU-CO8"/>
+                        <outlet property="userNameTF" destination="MHI-XU-zZ2" id="t7l-Xj-MYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="53.571428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="msP-mD-1ex">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yCF-wU-PWh" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yCF-wU-PWh" customClass="WelcomeViewController" customModule="AuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="efZ-Fn-iOJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKT-4y-4lc">
-                                <rect key="frame" x="60" y="104" width="294" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKT-4y-4lc">
+                                <rect key="frame" x="60" y="104" width="294" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -110,6 +111,9 @@
                                 <rect key="frame" x="170" y="662" width="74" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logOutButtonPressed" destination="yCF-wU-PWh" eventType="touchUpInside" id="3lL-bq-GZe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FKT-rZ-jeT"/>
@@ -123,6 +127,10 @@
                             <constraint firstItem="FKT-rZ-jeT" firstAttribute="bottom" secondItem="Nda-ku-G2m" secondAttribute="bottom" constant="170" id="lKS-cp-rtj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logOutButton" destination="Nda-ku-G2m" id="hJ2-MD-fjO"/>
+                        <outlet property="welcomeTextLabel" destination="zKT-4y-4lc" id="LSd-Xz-E0B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZkJ-63-8aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
