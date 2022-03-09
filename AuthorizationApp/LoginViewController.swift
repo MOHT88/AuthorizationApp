@@ -12,22 +12,29 @@ class ViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var logInButton: UIButton!
     
     
     private let okAction = UIAlertAction(title: "OK", style: .default)
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 
+    
+    private func wrongData () {
+        let wrongData = UIAlertController(
+            title: "Invalid login or password",
+            message: "Please, enter correct login and password",
+            preferredStyle: .alert
+        )
+        wrongData.addAction(okAction)
+        present(wrongData, animated: true)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.welcomeText = userNameTF.text
     }
+    
     
     @IBAction func remindUserName() {
         let remindUserName = UIAlertController(
@@ -39,7 +46,6 @@ class ViewController: UIViewController {
         present(remindUserName, animated: true)
     }
    
-    
     @IBAction func remindPassword() {
         let remindPassword = UIAlertController(
             title: "Oops!",
@@ -50,12 +56,25 @@ class ViewController: UIViewController {
         present(remindPassword, animated: true)
         
     }
+
     
     @IBAction func logInButtonPressed() {
+        if userNameTF.text != "User" || passwordTF.text != "Password" {
+            wrongData()
+            passwordTF.text = ""
+        } else {
+            performSegue(withIdentifier: "goToWellcome", sender: self)
+    
+        }
    }
 
+    
+    
 
-
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
 
 
 

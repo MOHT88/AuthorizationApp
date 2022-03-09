@@ -28,9 +28,6 @@
                                         <rect key="frame" x="0.0" y="66" width="334" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
-                                        <connections>
-                                            <action selector="enterPassword" destination="BYZ-38-t0r" eventType="editingDidEnd" id="4HP-KW-KoZ"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -44,7 +41,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjh-HL-pCZ"/>
-                                    <segue destination="yCF-wU-PWh" kind="presentation" id="LNT-Bv-1vy"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="TQw-9g-Zbo">
@@ -84,9 +80,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="1xE-Kr-Gj7" id="bgx-H5-GH1"/>
                         <outlet property="passwordTF" destination="lpG-xS-wRj" id="3gI-xU-CO8"/>
                         <outlet property="userNameTF" destination="MHI-XU-zZ2" id="t7l-Xj-MYc"/>
+                        <segue destination="yCF-wU-PWh" kind="presentation" identifier="goToWellcome" id="dtC-5l-dnA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,20 +104,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nda-ku-G2m">
-                                <rect key="frame" x="170" y="662" width="74" height="30"/>
+                                <rect key="frame" x="155" y="644" width="104" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Log Out"/>
                                 <connections>
-                                    <action selector="logOutButtonPressed" destination="yCF-wU-PWh" eventType="touchUpInside" id="3lL-bq-GZe"/>
+                                    <segue destination="4bU-oI-ycg" kind="unwind" unwindAction="unwindFor:" id="QVa-lY-xTX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FKT-rZ-jeT"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="Nda-ku-G2m" firstAttribute="leading" secondItem="FKT-rZ-jeT" secondAttribute="leading" constant="170" id="83o-LP-Qh2"/>
+                            <constraint firstItem="Nda-ku-G2m" firstAttribute="centerX" secondItem="FKT-rZ-jeT" secondAttribute="centerX" id="DrS-LJ-QSy"/>
                             <constraint firstItem="zKT-4y-4lc" firstAttribute="leading" secondItem="FKT-rZ-jeT" secondAttribute="leading" constant="60" id="H8L-p4-HxF"/>
-                            <constraint firstItem="FKT-rZ-jeT" firstAttribute="trailing" secondItem="Nda-ku-G2m" secondAttribute="trailing" constant="170" id="JNA-6i-gHH"/>
                             <constraint firstItem="zKT-4y-4lc" firstAttribute="top" secondItem="FKT-rZ-jeT" secondAttribute="top" constant="60" id="NmR-aY-if4"/>
                             <constraint firstItem="FKT-rZ-jeT" firstAttribute="trailing" secondItem="zKT-4y-4lc" secondAttribute="trailing" constant="60" id="QMy-QH-c8G"/>
                             <constraint firstItem="FKT-rZ-jeT" firstAttribute="bottom" secondItem="Nda-ku-G2m" secondAttribute="bottom" constant="170" id="lKS-cp-rtj"/>
@@ -133,6 +129,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZkJ-63-8aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4bU-oI-ycg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="718.84057971014499" y="53.571428571428569"/>
         </scene>

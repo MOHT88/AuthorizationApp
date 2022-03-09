@@ -23,10 +23,10 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func logOutButtonPressed() {
-        dismiss(animated: true)
-    }
+//
+//    @IBAction func logOutButtonPressed() {
+//        dismiss(animated: true)
+//    }
     
     
     
