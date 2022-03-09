@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         welcomeVC.welcomeText = userNameTF.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     @IBAction func remindUserName() {
         let remindUserName = UIAlertController(
             title: "Oops!",
