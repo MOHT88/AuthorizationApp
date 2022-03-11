@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomeTextLabel: UILabel!
     
-    var welcomeText: String!
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,6 @@ class WelcomeViewController: UIViewController {
         layer.colors = [UIColor.systemBlue.cgColor, UIColor.systemRed.cgColor]
         view.layer.insertSublayer(layer, at: 0)
        
-        welcomeTextLabel.text = "Welcome, " + welcomeText + "!"
+        welcomeTextLabel.text = "Welcome, \(user)!"
     }
 }
