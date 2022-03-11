@@ -80,7 +80,7 @@
                     <connections>
                         <outlet property="passwordTF" destination="lpG-xS-wRj" id="3gI-xU-CO8"/>
                         <outlet property="userNameTF" destination="MHI-XU-zZ2" id="t7l-Xj-MYc"/>
-                        <segue destination="yCF-wU-PWh" kind="presentation" identifier="goToWellcome" id="dtC-5l-dnA"/>
+                        <segue destination="yCF-wU-PWh" kind="presentation" identifier="goToWellcome" modalPresentationStyle="fullScreen" id="dtC-5l-dnA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -112,9 +112,8 @@
                                     <segue destination="4bU-oI-ycg" kind="unwind" unwindAction="unwindFor:" id="QVa-lY-xTX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R6-ZQ-gRt">
-                                <rect key="frame" x="93" y="189" width="135" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9R6-ZQ-gRt">
+                                <rect key="frame" x="156" y="128" width="63" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -127,7 +126,9 @@
                             <constraint firstItem="zKT-4y-4lc" firstAttribute="leading" secondItem="FKT-rZ-jeT" secondAttribute="leading" constant="60" id="H8L-p4-HxF"/>
                             <constraint firstItem="zKT-4y-4lc" firstAttribute="top" secondItem="FKT-rZ-jeT" secondAttribute="top" constant="60" id="NmR-aY-if4"/>
                             <constraint firstItem="FKT-rZ-jeT" firstAttribute="trailing" secondItem="zKT-4y-4lc" secondAttribute="trailing" constant="60" id="QMy-QH-c8G"/>
+                            <constraint firstItem="9R6-ZQ-gRt" firstAttribute="centerX" secondItem="FKT-rZ-jeT" secondAttribute="centerX" id="czV-x5-rao"/>
                             <constraint firstItem="FKT-rZ-jeT" firstAttribute="bottom" secondItem="Nda-ku-G2m" secondAttribute="bottom" constant="170" id="lKS-cp-rtj"/>
+                            <constraint firstItem="9R6-ZQ-gRt" firstAttribute="top" secondItem="zKT-4y-4lc" secondAttribute="bottom" constant="32" id="uOW-v4-oBf"/>
                         </constraints>
                     </view>
                     <connections>

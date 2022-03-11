@@ -21,6 +21,6 @@ class WelcomeViewController: UIViewController {
         layer.colors = [UIColor.systemBlue.cgColor, UIColor.systemRed.cgColor]
         view.layer.insertSublayer(layer, at: 0)
        
-        welcomeTextLabel.text = "Welcome, " + welcomeText + "!\n 🤪"
+        welcomeTextLabel.text = "Welcome, " + welcomeText + "!"
     }
 }
