@@ -67,7 +67,6 @@ class ViewController: UIViewController {
         wrongData.addAction(okAction)
         present(wrongData, animated: true)
     }
-
 }
 
 
