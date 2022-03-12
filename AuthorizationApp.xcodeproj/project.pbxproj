@@ -58,11 +58,11 @@
 		58327EBF27D752F8004C0F05 /* AuthorizationApp */ = {
 			isa = PBXGroup;
 			children = (
-				58B9F59027DB958A00012C20 /* App */,
 				58B9F59327DB96A000012C20 /* Models */,
 				58B9F58F27DB951500012C20 /* ViewControllers */,
 				58B9F59227DB965800012C20 /* Storyboards */,
 				58B9F59127DB962900012C20 /* Resources */,
+				58B9F59027DB958A00012C20 /* App */,
 			);
 			path = AuthorizationApp;
 			sourceTree = "<group>";

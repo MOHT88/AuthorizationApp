@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="-24.375" y="52.816901408450704"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="msP-mD-1ex">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yCF-wU-PWh" customClass="WelcomeViewController" customModule="AuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" modalPresentationStyle="fullScreen" id="yCF-wU-PWh" customClass="WelcomeViewController" customModule="AuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="efZ-Fn-iOJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                             <constraint firstItem="9R6-ZQ-gRt" firstAttribute="top" secondItem="zKT-4y-4lc" secondAttribute="bottom" constant="32" id="uOW-v4-oBf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="KKC-qX-h34"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="KKC-qX-h34"/>
                     <connections>
                         <outlet property="welcomeTextLabel" destination="zKT-4y-4lc" id="LSd-Xz-E0B"/>
                     </connections>
@@ -176,9 +176,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="mTF-eU-yLr">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="5H8-wa-wmQ">
+                        <barButtonItem key="rightBarButtonItem" title="More info" id="5H8-wa-wmQ">
                             <connections>
-                                <segue destination="2K3-XH-mZY" kind="presentation" modalPresentationStyle="fullScreen" id="EdP-ks-aAh"/>
+                                <segue destination="2K3-XH-mZY" kind="show" id="LiV-I5-Zjq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -197,19 +197,20 @@
                         <viewLayoutGuide key="safeArea" id="kQ8-7W-S1o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RiF-Wf-lBY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAo-Nn-job" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2685" y="854"/>
         </scene>
-        <!--Item-->
+        <!--User-->
         <scene sceneID="hbn-qS-sWU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j4J-aT-mvt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="I2p-n0-srW"/>
+                <navigationController title="User" automaticallyAdjustsScrollViewInsets="NO" id="j4J-aT-mvt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="I2p-n0-srW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dT-9U-AaV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6dT-9U-AaV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -223,6 +224,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
