@@ -15,6 +15,7 @@
 		58327ECD27D752F9004C0F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58327ECB27D752F9004C0F05 /* LaunchScreen.storyboard */; };
 		58327ED727D8A3C0004C0F05 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58327ED627D8A3C0004C0F05 /* WelcomeViewController.swift */; };
 		58B9536327DCEE6C00EA9FA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9536227DCEE6C00EA9FA1 /* User.swift */; };
+		58B9536727DD159200EA9FA1 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9536627DD159200EA9FA1 /* PersonalInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		58327ECE27D752F9004C0F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58327ED627D8A3C0004C0F05 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		58B9536227DCEE6C00EA9FA1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		58B9536627DD159200EA9FA1 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				58327ED627D8A3C0004C0F05 /* WelcomeViewController.swift */,
 				58327EC427D752F8004C0F05 /* LoginViewController.swift */,
+				58B9536627DD159200EA9FA1 /* PersonalInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B9536727DD159200EA9FA1 /* PersonalInfoViewController.swift in Sources */,
 				58327EC527D752F8004C0F05 /* LoginViewController.swift in Sources */,
 				58327ED727D8A3C0004C0F05 /* WelcomeViewController.swift in Sources */,
 				58327EC127D752F8004C0F05 /* AppDelegate.swift in Sources */,

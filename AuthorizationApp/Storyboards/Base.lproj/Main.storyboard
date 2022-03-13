@@ -165,23 +165,39 @@
             </objects>
             <point key="canvasLocation" x="810" y="53"/>
         </scene>
-        <!--View Controller-->
+        <!--Sergey Ivanov-->
         <scene sceneID="dNc-Qm-s46">
             <objects>
-                <viewController id="gmV-1U-SxK" sceneMemberID="viewController">
+                <viewController id="gmV-1U-SxK" customClass="PersonalInfoViewController" customModule="AuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLa-ff-UIx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dff-dN-5cG">
+                                <rect key="frame" x="20" y="151" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dxP-rk-hyy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dff-dN-5cG" firstAttribute="leading" secondItem="dxP-rk-hyy" secondAttribute="leading" constant="20" id="GkO-Dk-Alu"/>
+                            <constraint firstItem="dxP-rk-hyy" firstAttribute="trailing" secondItem="dff-dN-5cG" secondAttribute="trailing" constant="20" id="cOy-0b-E5i"/>
+                            <constraint firstItem="dff-dN-5cG" firstAttribute="top" secondItem="dxP-rk-hyy" secondAttribute="top" constant="60" id="fka-y9-gAi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mTF-eU-yLr">
+                    <navigationItem key="navigationItem" title="Sergey Ivanov" id="mTF-eU-yLr">
                         <barButtonItem key="rightBarButtonItem" title="More info" id="5H8-wa-wmQ">
                             <connections>
                                 <segue destination="2K3-XH-mZY" kind="show" id="LiV-I5-Zjq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="personInformationLabel" destination="dff-dN-5cG" id="iPi-H0-NVW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2D-D3-R3x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,13 +211,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CSKA" translatesAutoresizingMaskIntoConstraints="NO" id="M0V-uX-IW5">
-                                <rect key="frame" x="34" y="145" width="240" height="287"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CSKA" translatesAutoresizingMaskIntoConstraints="NO" id="M0V-uX-IW5">
+                                <rect key="frame" x="40" y="140.5" width="240" height="287"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="287" id="6Eo-hv-vhf"/>
+                                    <constraint firstAttribute="width" constant="240" id="Uf3-wq-XzR"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kQ8-7W-S1o"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="M0V-uX-IW5" firstAttribute="centerX" secondItem="t9O-Vs-tE1" secondAttribute="centerX" id="NGb-vd-pkT"/>
+                            <constraint firstItem="M0V-uX-IW5" firstAttribute="centerY" secondItem="t9O-Vs-tE1" secondAttribute="centerY" id="S7j-iL-Epn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RiF-Wf-lBY"/>
                 </viewController>

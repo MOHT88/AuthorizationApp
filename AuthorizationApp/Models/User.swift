@@ -12,10 +12,16 @@ struct UserData {
     let password = "Password"
 }
 
-struct Person {
+struct PersonData {
     let name = "Sergey"
     let surname = "Ivanov"
-    let information = "freferge"
+    let information = """
+Привет!
+Меня зовут Сергей. Мне 33 года.
+После 13 лет работы в одной компании, решил сменить деятельность.
+Свободное время провожу с семьёй.
+Болею за ЦСКА.
+"""
 }
 
 

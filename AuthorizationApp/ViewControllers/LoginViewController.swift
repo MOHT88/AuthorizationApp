@@ -13,11 +13,21 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     private let userData = UserData()
+    private let person = PersonData()
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = userData.login
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = person.name + " " + person.surname
+            } else if let navigationVC = viewController as? UINavigationController {
+                let personalDataVC = navigationVC.topViewController as? PersonalInfoViewController
+                personalDataVC?.user = userData.login
+            }
+        }
     }
 
     
